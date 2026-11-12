@@ -1,0 +1,214 @@
+/* ITR design system v1.0 tokens. Every colour, size, radius and duration lives here. */
+:root {
+  /* Canvas */
+  --canvas-top: #1c2d3f;
+  --canvas-middle: #5798ac;
+  --canvas-bottom: #b1bfca;
+  --canvas: linear-gradient(180deg, var(--canvas-top) 0%, var(--canvas-middle) 52%, var(--canvas-bottom) 100%);
+  --splash-bg: radial-gradient(120% 80% at 50% 40%, #27495c 0%, var(--canvas-top) 62%, #142230 100%);
+  --splash-glow: radial-gradient(closest-side, rgba(87, 152, 172, 0.55), rgba(87, 152, 172, 0));
+
+  /* Surfaces */
+  --surface-card: rgba(255, 255, 255, 0.80);
+  --surface-card-hover: rgba(255, 255, 255, 0.92);
+  --surface-solid: #f1f5f7;
+  --surface-selected: #caf0f5;
+  --surface-pressed: #cad6de;
+  --surface-disabled: #e3eaef;
+  --surface-inverse: #0f1f2c;
+  --surface-overlay: rgba(11, 23, 34, 0.45);
+  --surface-white: #ffffff;
+
+  /* Text */
+  --text-primary: #0f1f2c;
+  --text-secondary: #243747;
+  --text-muted: #33485a;
+  --text-disabled: #5b7185;
+  --text-inverse: #ffffff;
+  --text-inverse-muted: #cad6de;
+
+  /* Borders, focus, icons */
+  --border-glass: rgba(255, 255, 255, 0.60);
+  --border-control: #4a6074;
+  --border-strong: #0b1722;
+  --border-disabled: #a9bac6;
+  --border-subtle: rgba(15, 31, 44, 0.10);
+  --focus-ring: #047e9d;
+  --icon-default: #243747;
+  --icon-muted: #33485a;
+  --icon-disabled: #7f95a6;
+
+  /* Buttons */
+  --btn-primary-bg: #0f1f2c;
+  --btn-primary-bg-hover: #243747;
+  --btn-primary-bg-pressed: #0b1722;
+  --btn-primary-fg: #ffffff;
+  --btn-secondary-bg: #f1f5f7;
+  --btn-secondary-bg-hover: #ffffff;
+  --btn-secondary-bg-pressed: #cad6de;
+  --btn-secondary-border: #0f1f2c;
+  --btn-secondary-fg: #0f1f2c;
+  --btn-danger-bg: #a32218;
+  --btn-danger-bg-hover: #8a1c13;
+  --btn-danger-fg: #ffffff;
+
+  /* Status: bg / border / icon / text / solid */
+  --success-bg: #e8f5ec; --success-border: #1e7f45; --success-icon: #166534; --success-text: #14532d; --success-solid: #166534;
+  --warning-bg: #fff3d6; --warning-border: #b45f06; --warning-icon: #7a4a00; --warning-text: #633b00; --warning-solid: #7a4a00;
+  --danger-bg: #fdeae8;  --danger-border: #c0392b;  --danger-icon: #a32218;  --danger-text: #8a1c13;  --danger-solid: #a32218;
+  --info-bg: #e7f0fe;    --info-border: #2b63c9;    --info-icon: #1a4fa8;    --info-text: #163f86;    --info-solid: #1a4fa8;
+  --neutral-bg: #e3eaef; --neutral-border: #a9bac6; --neutral-icon: #33485a; --neutral-text: #243747; --neutral-solid: #243747;
+
+  /* Charts */
+  --chart-1: #047e9d;
+  --chart-2: #c2541b;
+  --chart-3: #6250d6;
+  --chart-4: #9a6a00;
+  --chart-grid: rgba(15, 31, 44, 0.12);
+  --chart-gap: #f1f5f7;
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --fs-display: clamp(2rem, 1.2rem + 3.6vw, 3rem);   --lh-display: 1.1667; --ls-display: -1px;
+  --fs-figure: 2rem;      --lh-figure: 2.5rem;
+  --fs-h1: 1.5rem;        --lh-h1: 2rem;
+  --fs-h2: 1.25rem;       --lh-h2: 1.75rem;
+  --fs-title: 1rem;       --lh-title: 1.5rem;
+  --fs-body-lg: 1rem;     --lh-body-lg: 1.5rem;
+  --fs-body: 0.875rem;    --lh-body: 1.25rem;
+  --fs-label: 0.875rem;   --lh-label: 1.25rem;
+  --fs-small: 0.75rem;    --lh-small: 1rem;
+  --fs-code: 0.75rem;     --lh-code: 1.125rem;
+  --ls-chart: 0.06em;
+
+  /* Spacing: 12 steps */
+  --space-0: 0;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* Corners */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* Strokes */
+  --stroke-thin: 1px;
+  --stroke-control: 1.5px;
+  --stroke-thick: 2px;
+
+  /* Effects: one glass, one floating */
+  --glass-blur: 12px;
+  --shadow-glass: 0 8px 24px rgba(15, 31, 44, 0.14);
+  --shadow-floating: 0 12px 32px rgba(15, 31, 44, 0.22);
+  --shadow-row: 0 1px 2px rgba(15, 31, 44, 0.06);
+
+  /* Fixed sizes */
+  --size-icon-sm: 16px;
+  --size-icon-md: 20px;
+  --size-icon-lg: 24px;
+  --size-avatar-sm: 32px;
+  --size-avatar-md: 40px;
+  --size-avatar-lg: 56px;
+  --size-pill-h: 28px;
+  --size-badge: 20px;
+  --size-dot: 10px;
+  --size-target: 44px;
+  --size-step: 28px;
+  --size-progress: 6px;
+  --size-logo: 40px;
+
+  /* Layout: mobile values first */
+  --page-margin: 20px;
+  --page-gutter: 16px;
+  --card-pad: 16px;
+  --section-gap: 16px;
+  --control-h: 48px;
+  --field-h: 52px;
+  --textarea-h: 120px;
+  --chip-h: 44px;
+  --row-h: 72px;
+  --header-h: 60px;
+  --tabbar-h: 84px;
+  --tabbar-item-w: 90px;
+  --sidebar-w: 260px;
+  --sidebar-w-collapsed: 96px;
+  --dialog-w: 480px;
+  --content-max: 1200px;
+  --column-narrow: 560px;
+  --auth-card-w: 520px;
+  --shell-gap: 24px;
+  --shell-pad: 32px;
+
+  /* Motion */
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 360ms;
+  --ease-std: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --toast-duration: 6000ms;
+
+  /* Breakpoints (reference only, @media uses literal px):
+     --bp-xs 320, --bp-sm 480, --bp-md 768, --bp-lg 1024, --bp-xl 1280, --bp-2xl 1536 */
+  --bp-xs: 320;
+  --bp-sm: 480;
+  --bp-md: 768;
+  --bp-lg: 1024;
+  --bp-xl: 1280;
+  --bp-2xl: 1536;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* Desktop layout mode: one switch, every part resizes */
+@media (min-width: 768px) {
+  :root {
+    --page-margin: clamp(24px, 3vw, 32px);
+    --page-gutter: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --card-pad: 24px;
+    --section-gap: 24px;
+    --control-h: 44px;
+    --field-h: 48px;
+    --chip-h: 36px;
+    --row-h: 64px;
+    --header-h: 72px;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root { --shell-pad: 40px; }
+}
+
+/* If the person turns transparency off, glass becomes the solid fallback */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --surface-card: var(--surface-solid);
+    --surface-card-hover: var(--surface-white);
+    --glass-blur: 0px;
+  }
+}
