@@ -1,0 +1,49 @@
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes row-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@keyframes check-pop { 0% { transform: scale(0.4); } 60% { transform: scale(1.15); } 100% { transform: scale(1); } }
+@keyframes pulse-dot { 0%, 100% { transform: scale(1); } 50% { transform: scale(0.7); } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(-16px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes toast-out { to { opacity: 0; transform: translateY(-12px) scale(0.98); } }
+@keyframes sheet-up { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes sheet-down { to { transform: translateY(100%); } }
+@keyframes dialog-in { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: none; } }
+@keyframes dialog-out { to { opacity: 0; transform: scale(0.97); } }
+@keyframes shake { 10%, 90% { transform: translateX(-1px); } 20%, 80% { transform: translateX(2px); } 30%, 50%, 70% { transform: translateX(-4px); } 40%, 60% { transform: translateX(4px); } }
+@keyframes success-pop { 0% { transform: scale(0.5); opacity: 0; } 60% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes ring-out { 0% { transform: scale(0.8); opacity: 0; } 12% { opacity: 0.6; } 100% { transform: scale(2.1); opacity: 0; } }
+
+/* Route transitions: forward slides in from the right, back from the left, tabs fade */
+.screen.enter-forward { animation: route-in-right var(--dur-base) var(--ease-std) both; z-index: 2; }
+.screen.exit-forward { animation: route-out-left var(--dur-base) var(--ease-std) both; z-index: 1; pointer-events: none; }
+.screen.enter-back { animation: route-in-left var(--dur-base) var(--ease-std) both; z-index: 2; }
+.screen.exit-back { animation: route-out-right var(--dur-base) var(--ease-std) both; z-index: 1; pointer-events: none; }
+.screen.enter-fade { animation: route-fade-in var(--dur-base) var(--ease-std) both; z-index: 2; }
+.screen.exit-fade { animation: fade-out var(--dur-fast) var(--ease-std) both; z-index: 1; pointer-events: none; }
+
+@keyframes route-in-right { from { transform: translateX(24%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes route-out-left { to { transform: translateX(-12%); opacity: 0; } }
+@keyframes route-in-left { from { transform: translateX(-24%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes route-out-right { to { transform: translateX(12%); opacity: 0; } }
+@keyframes route-fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.shake { animation: shake 0.42s var(--ease-std); }
+.pop-in { animation: success-pop var(--dur-slow) var(--ease-out) both; }
+.fade-up { animation: fade-up var(--dur-slow) var(--ease-out) both; }
+
+/* Splash: 2 s, logo builds itself then hands over to the app */
+@keyframes splash-tile { 0% { transform: scale(0.55) rotate(-8deg); opacity: 0; filter: blur(6px); } 55% { transform: scale(1.06) rotate(0); opacity: 1; filter: blur(0); } 100% { transform: scale(1); opacity: 1; } }
+@keyframes splash-doc { from { transform: translateY(6px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes splash-word { from { opacity: 0; transform: translateY(14px); letter-spacing: 0.3em; } to { opacity: 1; transform: none; letter-spacing: -0.01em; } }
+@keyframes splash-tag { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes splash-glow { 0% { opacity: 0; transform: scale(0.6); } 60% { opacity: 1; } 100% { opacity: 0.85; transform: scale(1); } }
+@keyframes splash-out { to { opacity: 0; transform: scale(1.04); visibility: hidden; } }
+@keyframes splash-bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes app-in { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: none; } }
+@keyframes splash-badge { from { transform: scale(0); opacity: 0; } 70% { transform: scale(1.15); } to { transform: scale(1); opacity: 1; } }
+
+.app.is-entering { animation: app-in var(--dur-slow) var(--ease-out) both; }
